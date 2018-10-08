@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>url has been shortened!!!</h2>
+
+        <a href={{url}} >{{url}}</a>
+        <input type="text" style="visibility: hidden" id="url_short" value={{url}} readonly>
+        <p id="__copy"></p>
+        <button onclick="url_copy()">Copy link</button>
+
+        <script>
+               function url_copy() {
+                    var copyText = document.getElementById("url_short");
+                    copyText.select();
+                    document.execCommand("Copy");
+                    alert("Copied the text: " + copyText.value);
+
+}
+        </script>
+    </body>
+</html>
